@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR-1 Form Replica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Assessment Year: 2024-2025</h2>
+            <div class="status-info">
+                <span>Status: Individual</span>
+                <span>Sl. No: 925376</span>
+            </div>
+        </header>
+
+        <form id="itrForm">
+            <div class="section personal-info">
+                <h3>Personal Information</h3>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="mobile">Mobile No.:</label>
+                <input type="text" id="mobile" name="mobile">
+
+                <label for="father_name">Father's Name:</label>
+                <input type="text" id="father_name" name="father_name">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+
+                <label for="pincode">Pin Code:</label>
+                <input type="text" id="pincode" name="pincode">
+
+                <label for="locality">Area / Locality:</label>
+                <input type="text" id="locality" name="locality">
+
+                <label for="city">City / Place:</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="pan">PAN:</label>
+                <input type="text" id="pan" name="pan">
+
+                <label for="filing_date">Date of Filing Return:</label>
+                <input type="date" id="filing_date" name="filing_date" value="2024-10-17">
+
+                <label for="due_date">Due Date:</label>
+                <input type="date" id="due_date" name="due_date">
+
+                <label for="residential_status">Residential Status:</label>
+                <select id="residential_status" name="residential_status">
+                    <option value="resident">01 - Resident</option>
+                    <option value="non-resident">02 - Non-Resident</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="senior" name="senior"> Senior - 60</label>
+                    <label><input type="checkbox" id="very_senior" name="very_senior"> Very Senior - 80</label>
+                </div>
+            </div>
+
+            <div class="section income-info">
+                <h3>Heads of Income</h3>
+
+                <label><input type="checkbox" name="income_salary"> Income from Salary</label>
+                <label for="employers">Number of Employers:</label>
+                <select id="employers" name="employers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="income_house_self"> Income from House Property - Self
+                        Occupied</label>
+                    <label for="sources_self">No. of Sources:</label>
+                    <select id="sources_self" name="sources_self">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="income_house_letout"> Income from House Property - Let
+                        Out</label>
+                    <label for="sources_letout">No. of Sources:</label>
+                    <select id="sources_letout" name="sources_letout">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <label><input type="checkbox" name="income_business"> Profits and Gains of Business</label>
+                <label for="business_sources">Number of Business:</label>
+                <select id="business_sources" name="business_sources">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <label><input type="checkbox" name="income_special_business"> Special Business - 44AD/AE</label>
+                <label for="special_sources">No. of Special Business:</label>
+                <select id="special_sources" name="special_sources">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <label><input type="checkbox" name="income_profession"> Profits from Profession</label>
+                <label for="profession_sources">Number of Professions:</label>
+                <select id="profession_sources" name="profession_sources">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <label><input type="checkbox" name="income_capital_long"> Income from Long-Term Capital Gains</label>
+                <label for="capital_long_sources">No. of Sources:</label>
+                <select id="capital_long_sources" name="capital_long_sources">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <label><input type="checkbox" name="income_capital_short"> Income from Short-Term Capital Gains</label>
+                <label for="capital_short_sources">No. of Sources:</label>
+                <select id="capital_short_sources" name="capital_short_sources">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <label><input type="checkbox" name="income_other"> Income from Other Sources</label>
+            </div>
+
+            <div class="submit-section">
+                <input type="submit" value="Submit and Convert to JSON" class="submit-btn">
+            </div>
+        </form>
+
+        <div id="json-output" class="json-output">
+            <h3>JSON Output:</h3>
+            <pre id="jsonData"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
